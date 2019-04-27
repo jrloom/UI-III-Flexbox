@@ -65,85 +65,126 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-.container {
-	max-width: 1000px;
-	margin: 0 auto;
-}
+/*****
+Layout
+*****/
 
 .row {
+	max-width: 1000px;
+	margin: 0 auto 40px auto;
+}
+
+.flex-row {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 50px;
 }
 
-.col {
+.flex-col {
 	display: flex;
-	flex-direction: column;
+	flex-flow: column wrap;
 	align-items: center;
 	justify-content: center;
 }
 
-.content-1-of-2 {
+.col-1-of-2 {
 	width: calc((100% - 60px) / 2);
 }
 
-.content-1-of-3 {
-	width: calc((100% - 2 * 60px) / 3);
+.col-1-of-3 {
+	width: calc((100% - 2 * 60px) / 3)
+}
+
+.col-1-of-4 {
+	width: calc((100% - 3 * 60px) / 4);
+}
+
+.col-3-of-4 {
+	width: calc(3 * ((100% - 3 * 60px) / 4) + 2 * 60px);
 }
 
 .divider {
 	height: .1px;
-	margin-bottom: 50px;
+	max-width: 1000px;
+	margin-bottom: 40px;	
 	border: 0;
-	box-shadow: 0 0 7px 1px lightslategray;
+	box-shadow: 0 0 0 1px lightslategray;
 }
 
 .spacer {
-	margin: 15px 0;
+	margin-bottom: 15px;
 }
 
-.navbar__link {
+/*****
+Images
+*****/
+
+.middle-img {
+	height: 200px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+
+/*****
+Components
+*****/
+
+.navbar {
+	margin-top: 8px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.navbar-background {
+	padding: 10px;
+	background: #333741;
+	border-radius: 3px;
+}
+
+.navbar__links {
 	text-decoration: none;
-	color: lightslategray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: .8px;
+	color: black;
 }
 
-.navbar__link:not(:last-child) {
-	margin-right: 80px;
+.navbar__links:not(:last-child) {
+	margin-right: 60px;
 }
 
 .header {
-	padding: 15px;
 	text-align: center;
 }
 
-.header__title--page {
+.header__title {
 	font-size: 70px;
 }
 
-.header__title--tagline {
-	width: 50%;
+.header__tagline {
+	width: 30%;
+	margin: 15px;
 	padding: 6px 8px;
 	border: 1px solid black;
 }
 
 .content__title {
-	align-self: flex-start;
 	font-size: 30px;
 }
 
 .content__textBox {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.3;
 }
 
-.copyright {
-	margin: 0 auto;
-	margin-top: -40px;
+.name {
+	font-size: 20px;
+	font-weight: bold;
 }
 
-.middle-img {
-	height: 200px;
-	width: 100%;
+.copyright {
+	margin-top: 25px;
+	text-align: center;
 }
