@@ -65,22 +65,6 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-.or {
-	background: orangered;
-}
-
-.yg {
-	background: yellowgreen;
-}
-
-.sb {
-	background: slateblue;
-}
-
-.lsg {
-	background: lightslategray;
-}
-
 body {
     background: white;
 }
@@ -92,6 +76,13 @@ Layout
 .container {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 70px 0;
 }
 
 .flex-row {
@@ -160,9 +151,6 @@ Buttons
 }
 
 .btn--cta {
-    /* align-self: flex-start; */
-    /* width: 100%; */
-    /* justify-self: flex-end; */
     padding: 10px 20px;
     background: #03ec4e;
 	box-shadow: 0 2px 4px rgba(0,0,0, .5);
@@ -268,4 +256,109 @@ Components
 .copyright {
     margin: 0 auto;
     text-align: center;
+}
+
+/*****
+Media Queries
+*****/
+
+@media only screen and (max-width: 1000px) {
+    body {
+        padding: 0 30px;
+    }
+
+    .btn {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .topbar {
+        flex-direction: column;
+        margin: 40px 0;
+    }
+
+    .navbar {
+        order: 1;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .btn {
+        width: 50%;
+    }
+}
+
+@media only screen and  (max-width: 775px) {
+    .navbar__links:not(:last-child) {
+        margin-right: 30px;
+    }    
+}
+
+@media only screen and (max-width: 750px) {
+    .flex-row {
+        margin: 40px 0;
+    }
+
+    .spacer--lrg {
+        margin: 40px 0;
+    }
+    
+
+    .btn {
+        width: 60%;
+    }
+
+    .card {
+        width: 50%;
+    }
+
+    .card:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 620px) { 
+    .main, .footer, .copyright {
+        margin: 40px 0;
+    }
+
+    .navbar {
+        display: none; /* turn into hamburger menu */
+    }
+
+    .flex-row {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .card:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .btn {
+        width: 40%;
+        margin: 40px auto 5px auto;
+        padding: 15px 20px;
+    }
+
+    .list {
+        align-self: center;
+        margin: 20px 0 40px 0;
+    }
+
+    .services-info-img {
+        display: none;
+    }
+
 }
